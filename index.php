@@ -27,7 +27,7 @@ if (check_auth()) {
 
         <?php if ($user) { ?>
 
-          <h1>Welcome back, <?=$user['username']?>!</h1>
+          <h1>Welcome back, <?=htmlspecialchars($user['username'])?>!</h1>
 
           <form class="mt-5" method="post" action="do_logout.php">
             <button type="submit" class="btn btn-primary">Logout</button>
